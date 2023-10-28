@@ -4,6 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
 
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -18,10 +19,9 @@ public class Test {
 		System.out.println(emp1.getAddress());
 		System.out.println(emp1.getCourses());
 
-
-		
-		
-
 	}
 
 }
+
+
+

@@ -1,0 +1,8 @@
+package com.springcore.ci;
+
+public class Addition {
+	
+	private int a;
+	private int b;
+	
+}

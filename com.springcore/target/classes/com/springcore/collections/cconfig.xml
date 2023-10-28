@@ -11,6 +11,7 @@
  <!-- this is our Beans  -->
  
  <bean name="emp1" class="com.springcore.collections.Emp">
+ 
  	<property name="name" value="radhe"	/>
  	
  	<property name="phones">
