@@ -1,0 +1,745 @@
+spring by durgesh 
+
+spring core
+spring data integretion
+spring web
+spring other important modules
+
+
+core java, jdbc, servlets& jsp 
+
+Spring is a dependency injection framework  to make java application loosely coupled.
+it makes the easy dev of javaEE application. and was developed by the rod jhonson in 2003.
+
+
+dependency injection is a design pattern.
+we use multiple classes to make th ejaba applications.and it is a oops language.
+
+	class Ramu
+	{
+		Geeta ob;
+		
+		public void doWork()
+		{
+		}
+		
+	}
+	
+	here ramu classss is depend on the geeta object. ramu is totally dend on the Geeta. and it is depenedency means.
+	here a class is depend on the other.
+	
+	
+	class Geeta
+	{
+	 	public void doWork()
+	 	{
+	 	}
+	}
+	
+	jab hum geeta ka object ramu ko de dengay toh he ramu fnction kar paayega
+	hum with the help of new keyword geeta ka object bnakar ramu class may daal dete thay lekin new keyword se bnane se ye tightly 		coupled ho jaayega.
+	jab bhi hme changes krne hogay toh code may changge krna hoga hme yani new keyword k baad class ka naam change krna hoga hme.
+	lekin spring kya kaam krta hai ki jo kaam hum new geeta(); se ibject bnakr daal rhe thay ye kaam spring krta hai .
+	iske paas capablity hai li ye dusre class k ao bject create krke khud se he ramu naam ki class may daal(inject) skta hai .
+	hum manulaay nhi krengay ye kaam ko.
+	isi ko humkhte hai inversion of control. humne object creation ka control apne hath se htaakar spring ko de dte hai and spring 		sari dependencies  ka dynamically runtime object create krke agr inject kr de toh ye hota hai inverionof control.
+	ioc container runtime pr geeta ka object create krega and inject kr dega ramu may.
+	
+	spring will create the oject of the class and it will inject to the another class. that is the inversion of control.
+	ye j2ee may use aat hai .
+	
+	
+	 applications may layers hoti hai 
+	 usme request ko handle krne k liye 			UI layer 				hoti hai.
+	 							Business layer
+	 							data access layer    data ko accesss krti hai.
+	 							database	       data ko access krti hai.
+	 							
+	
+	
+	
+	
+	UI layer pr java ki classes hoti hai .
+	
+	
+								UI layer 			-- ProductLayer		
+	 							Business layer			-- ProductService
+	 							data access layer    		-- ProductDao
+	 							database
+	 							
+	 							
+	 							
+	 ProductLayer is a java class and is caplable of handling the request only
+	 ProductService has the business logic capable of processing the user request.
+	 
+	 
+	 
+	 
+	 
+							        UI layer 			-- ProductLayer		
+	 							Business layer			-- ProductService 
+	 											ProductDao obj = new ProductDao();
+	 											
+	 							
+	 							
+	 							
+	 												
+	 							data access layer    		-- ProductDao (methods)
+	 							database
+
+hmne ProductService may ProductDao obj = new ProductDao(); bnaya ye new ki help se bnaya hmne aur ism eye tightly coupled ho gya.
+agr ProductDao ko chnage kr diya toh ProductService may bhi hme isko changes krne hogay an d recomplike krna hoga.
+this is not recommended in enterprises application we use spring for this and use dependency injection for this.
+and dynamically create the object of ProductDao and inject in the ProductService and
+create the object of ProductService and inject into the ProductLayer.
+ye ioc container ya spring apne aap kr lega.
+
+
+	 							
+	 	UI layer 			-- ProductLayer		
+	 	Business layer			-- ProductService
+	 	data access layer    		-- ProductDao
+	 	database
+	 	
+	 	
+	 	Spring jdbc is a module of spring and works for the database. backend may toh jdbc he chlegi but new api it gives.	 			spring orm ka use krte hai . spring hibernate ka use krte hai tab spring orm ka use krte hai jab hum.
+	 	strut or jsf ka use kr skte hai UI layer se but agar hum strut and jsf ka use nhi krte hai toh
+	 	hum Spring mvc ka use kr skte hai .
+	 	
+	 	
+	 	Spring security module ka use kr skte hai hum business layer pr kaam krne k liye .
+	 	
+	 	
+	 	
+	 	
+	
+	
+	
+	
+	
+	DI example 1 ----> 
+	
+	class A
+	{
+	 	
+	}
+	
+	class B
+	{
+		int bb;
+		
+		public void setBb(A a)
+		{
+		}
+		
+	}
+	
+	
+	
+	class SetterMethodDi
+	{
+		
+		
+		public static void main(String[] args)
+		{
+		A ob2 = new A();
+		B ob1 = new B();
+		ob1.setBb(ob2);
+		
+		}
+		
+	}
+	
+	
+	
+	DI example 2-------->		
+
+class A {
+    // Class A implementation
+}
+
+class B {
+    int bb;
+    A aDependency;
+
+    public B(A aDependency) {
+        this.aDependency = aDependency;
+    }
+
+    public void setBb(int bb) {
+        this.bb = bb;
+    }
+
+    public void doSomething() {
+        // Use the injected A dependency and bb
+    }
+}
+
+public class DependencyInjectionExample {
+    public static void main(String[] args) {
+        A ob2 = new A();
+        B ob1 = new B(ob2); // Inject instance of A into B
+        ob1.setBb(42);
+        ob1.doSomething();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Constructor-based Dependency Injection (DI)
+
+
+class A {
+    // Class A implementation
+}
+
+class B {
+    private int bb;
+    private A aDependency;
+
+    public B(A aDependency, int bb) {
+        this.aDependency = aDependency;
+        this.bb = bb;
+    }
+
+    public void doSomething() {
+        // Use the injected A dependency and bb
+    }
+}
+
+public class ConstructorBasedDIExample {
+    public static void main(String[] args) {
+        A ob2 = new A();
+        B ob1 = new B(ob2, 42); // Inject instances of A and int into B via constructor
+        ob1.doSomething();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+circular dependency example
+
+class A {
+    private B b;
+
+    public void setB(B b) {
+        this.b = b;
+    }
+
+    public void doSomething() {
+        System.out.println("A is doing something");
+        if (b != null) {
+            b.doSomething();
+        }
+    }
+}
+
+class B {
+    private A a;
+
+    public void setA(A a) {
+        this.a = a;
+    }
+
+    public void doSomething() {
+        System.out.println("B is doing something");
+        if (a != null) {
+            a.doSomething();
+        }
+    }
+}
+
+public class CircularDependencySetterInjectionExample {
+    public static void main(String[] args) {
+        A a = new A();
+        B b = new B();
+
+        // Set the dependencies using setter methods
+        a.setB(b);
+        b.setA(a);
+
+        // Now you can use the instances without causing a circular reference
+        a.doSomething();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dependency Injection (DI):  interface-based injection.based
+
+
+// Define the Service interface
+interface Service {
+    void performService();
+}
+
+
+class MyService implements Service {
+    public void performService() {
+        System.out.println("MyService is performing the service.");
+    }
+}
+
+// Class A depends on the Service interface via constructor injection
+class A {
+    private Service service;
+
+    public A(Service service) {
+        this.service = service;
+    }
+
+    public void doSomething() {
+        System.out.println("Class A is doing something.");
+        service.performService(); // Class A uses the injected Service implementation
+    }
+}
+
+// Class B also depends on the Service interface via constructor injection
+class B {
+    private Service service;
+
+    public B(Service service) {
+        this.service = service;
+    }
+
+    public void doSomething() {
+        System.out.println("Class B is doing something.");
+        service.performService(); // Class B uses the injected Service implementation
+    }
+}
+
+public class InterfaceBasedDIExample {
+    public static void main(String[] args) {
+        Service myService = new MyService(); // Create an instance of the Service implementation
+
+        A a = new A(myService); // Inject the Service implementation into class A
+        B b = new B(myService); // Inject the same Service implementation into class B
+
+        a.doSomething(); // Class A performs the service
+        b.doSomething(); // Class B performs the same service
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+	Lec - 3
+	
+	
+	
+	
+	1 - Spring Core Container: 
+	
+			core
+			beans
+			context
+			spEL (Spring expression lengauage)
+	
+	te 4 spring k core fundamentals provide krte hai, inhi par he Spring pura ka pura bases hai .
+	ye 4 mil k fundamentals basics DI , IOC , ye sari cheejeje provide krte hai.
+	
+	 Spring core and Spring bean provides the fundamentals  part of the framework.
+	 ioc , di feature.
+	 spring context modeuoe inherits the featires from the beans modeule.
+	 context ejb jms basic remoting context ki help se milte hai .
+	 spEL ye modeule powerful hai ye query ko manipulate krta hai.
+	 
+	 
+	 AOP
+	 Aspect
+	 instrumentation
+	 Messaging
+	 
+	 
+	 
+	 
+	2-  Data Access/integration
+			 	jdbc
+			 	orm
+			 	jms
+			 	oxm
+			 	
+	
+	3 - web
+				web
+				servlet
+				portlet
+				WebSocket
+				
+	4 - test
+	
+	
+	ye 4 main modeules hai 
+	
+	Spring AOP (Aspect-Oriented Programming): 
+	
+	
+	
+	
+	Spring Core Container: This is the core module of the Spring framework. It provides the fundamental features of the Spring framework, including dependency injection (IoC) and the BeanFactory. The core container consists of the following modules:
+
+spring-core: 
+spring-beans:
+spring-context:
+Spring AOP (Aspect-Oriented Programming): 
+
+spring-aop: AOP framework.
+
+
+
+Spring Data Access/Integration: These modules facilitate database access and integration with other technologies.
+
+spring-jdbc: JDBC support.
+spring-orm: Object-Relational Mapping (ORM) support (e.g., Hibernate, JPA).
+spring-tx: Transaction management support.			
+	 	
+	 	
+	 	
+	 
+	 
+
+
+	 	
+	 	
+	 	
+	 													
+	 							
+	 
+	
+	
+	
+	
+	
+	-----------------------------------------------------------------------------------------------------------------------------
+	Lec - 4
+	
+	SPring ioc container
+	is a predefined program , or it is a componenet of the spring framework.
+	jiase jvm k sath gc mil jata hai waise he hme spring k asth ioc container milta hai.
+	jo ki objects ko create krta hai. usko memeory may hold krke rkhta hai.
+	and if needed it can inject one object to another object. yani DI ka kaam bhi  kr sktra hai .
+	it means it maintains the lifecycle of the objrct jab se object create hota hai tab se 
+	and jab tak woh object destory nhi ho  jata tab tak ioc coontainer ise maintain krta hai.
+	spring ko hme beans btana hai yani ki woh jo classes jo ki use manage krni hai.
+	hum ise xml config file ise bta deni hai.
+	config may hum btayengay ki kon se bean kis par dependenat hai.
+	spring container is xml config ka use krega and un classes ka obbject bnayega.
+	and inject krega.main application jise ki use krni hogi ye classes and injection jo ki ioc container kr chuka hai .
+	ye application in objects ko get krke use kr skta hai.
+	
+	
+	APPLICATION CONTEXT
+	ye basically represent krta hai Spring ioc container.
+	ye ek interface hai jo represent krta hai ki hmara ioc container.
+	ye extends krta hai beanFactory ko 
+	hum iska object bnayaegay .hum container se value ko nikaal payengay 
+	jis container may objects hogay usme se objects nikaal paayengay application contaxt ki help se.
+	
+	
+	
+       In Spring Framework for Java, ApplicationContext is a fundamental interface and a central component for managing the lifecycle 		of beans and providing various services to Spring applications. An ApplicationContext is an advanced container for managing 	Spring beans and their configurations.
+       
+       this is an interface and we can not create the object of this interface.
+       iski sub class ka object create krna pdega.
+       
+      1-  ClassPathXmlApplicationContext: This implementation loads the Spring configuration from XML files in the classpath.
+
+      2- FileSystemXmlApplicationContext: Similar to ClassPathXmlApplicationContext, but it loads XML configuration files from the file 	      system.
+
+      3- AnnotationConfigApplicationContext: Loads Spring configurations from Java-based configuration classes annotated with  	       	@Configuration.
+	
+	
+	
+	 ye 3 classes hai inka hum object create krte hai 	
+	
+	ClassPathXmlApplicationContext- ye serach krti hai xml configuration ko java k classpath se 
+	agar xml configuration ko apne classpath may rkhna cahte hai toh hme ClassPathXmlApplicationContext
+	it scanes for theh xml configurations in the java classpath.
+	
+	
+	AnnotationConfigApplicationContext - ye un bean ko search krta hai un beans ko  jin par hmne annotation use kiya hai .
+	
+	
+	
+	
+	FileSystemXmlApplicationContext - ye config file ko fileSystem se search krta hai agar filesystem se config file ko 
+	search krna cahte hai toh hum FileSystemXmlApplicationContext ka use kar skte hai 
+	toh hum ClassPathXmlApplicationContext ka use krna hai hum yhi par he rkhegay xml file ko.
+	
+	
+	ioc container object ki lifecycle ko manage krga and hme iski vjh se ready to use objects mil jayengay and hum 
+	application may get kar skte hai.
+	hme objects bnane nhi pdegay 
+	
+	
+	APPLICATION CONTEXT iski implementaion 3 trh se di gyi hai jise hum use krte hai.
+	ClassPathXmlApplicationContext
+	FileSystemXmlApplicationContext
+	AnnotationConfigApplicationContext
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	-----------------------------------------------------------------------------------------------------------------------------
+	Lec - 5
+	
+	class student
+	{
+	int id;
+	String name;
+	Address addr;
+	}
+	
+	class Address
+	{
+	String street;
+	String city;
+	String state;
+	String country;
+	}
+	
+	
+	student is totally dependent on the Address. 
+	and spring framework will create the object obj of this address class and set the street , city , state ,country at runtime
+	ye student ka bhi object bnayega and id and name ki value ko bhi inject krega and Address  may  obj ko inject kr dega.
+	at runtime par automatically.
+	and ye student ka object hme de dega and hum use kar paayengay.
+	sara dependency management hoga ioc container ka yhi hai DI.
+	ioc container jo bhi required dependencies hai woh khud se create krega and injec krega and that is a
+	automatically done by the ioc container.
+	
+	
+	Dependency injection can be done in the two ways by ioc container
+	using setter injection (property injection)
+	constructor injection
+	
+	
+	
+constructor injection-->	
+
+class Address {
+    private String street;
+    private String city;
+
+    public Address(String street, String city) {
+        this.street = street;
+        this.city = city;
+    }
+
+    public String getFullAddress() {
+        return street + ", " + city;
+    }
+}
+
+class Student {
+    private String name;
+    private Address address;
+
+    public Student(String name, Address address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    public void displayStudentInfo() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Address: " + address.getFullAddress());
+    }
+}
+
+public class StudentAddressInjectionExample {
+    public static void main(String[] args) {
+        Address studentAddress = new Address("123 Main St", "Springfield");
+        Student student = new Student("Alice", studentAddress);
+
+        student.displayStudentInfo();
+    }
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+setter injection-->
+	
+class Address {
+    private String street;
+    private String city;
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getFullAddress() {
+        return street + ", " + city;
+    }
+}
+
+class Student {
+    private String name;
+    private Address address;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void displayStudentInfo() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Address: " + address.getFullAddress());
+    }
+}
+
+public class StudentAddressSetterInjectionExample {
+    public static void main(String[] args) {
+        Address studentAddress = new Address();
+        studentAddress.setStreet("123 Main St");
+        studentAddress.setCity("Springfield");
+
+        Student student = new Student();
+        student.setName("Alice");
+        student.setAddress(studentAddress);
+
+        student.displayStudentInfo();
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+	Spring ki bhi ek configuration file hogi jise hum khegay xml file.
+	isme hum sari cheeje btayegay container ko kis class ka object banana hai fer ye
+	us class ka object bnayega and uska lifecylce ko maintain krega .
+	and usi class ko hum khegay beans and woh beans kis par depend hai .
+	
+	xml or configurartion file is the file where we declare beans and its dependency.
+	<beans> is the tag used to define the beans.
+	<bean> kon c class hai 
+	
+	Data Types jab ye data ko inject krta hai tab ye datatypes ko dekhta hai .
+	ye kis type ki DI hai. kis type ka  data hai ye .
+	
+	
+	Data types 
+		1 - Primitive data types
+				byte, short, char , int ,float, double, long , boolean.
+		 ye primtive type ko inject kar skta hai.
+		 
+		2 - colection type
+				List ,Set, Map and properties.
+				
+		3 - Reference Type 
+				other class object.(user defined objects).
+				
+				
+				
+	
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+						
+
