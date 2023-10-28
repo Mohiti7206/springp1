@@ -17,25 +17,13 @@
  	<property name="sname" value="Durgesh Tiwari" />
  
  	<property name="saddr" value="ynr"  />
- 		
- </bean>
- 
- 
- 
- 
- <bean class="com.springcore.Student" name="student2">
- 
- 	<property name="sid" value="223347" />
  	
  	
- 	<property name="sname" value="kamla Tiwari" />
  
- 	<property name="saddr" value="jammu"  />
- 		
+ 
+ 	
+ 	
  </bean>
- 
- 
- 
  
  
 </beans>

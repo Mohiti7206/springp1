@@ -11,31 +11,20 @@
  <!-- this is our Beans  -->
  <bean class="com.springcore.Student" name="student1">
  
- 	<property name="sid" value="223344" />
+ 	<property name="sid">
+ 	<value>223344</value>
+ 	</property>
  	
  	
- 	<property name="sname" value="Durgesh Tiwari" />
+ 	<property name="sname">
+ 	<value>Durgesh Tiwari</value>
+ 	</property>
  
- 	<property name="saddr" value="ynr"  />
- 		
+ <property name="saddr">
+ 	<value>ynr</value>
+ 	</property>
+ 	
  </bean>
- 
- 
- 
- 
- <bean class="com.springcore.Student" name="student2">
- 
- 	<property name="sid" value="223347" />
- 	
- 	
- 	<property name="sname" value="kamla Tiwari" />
- 
- 	<property name="saddr" value="jammu"  />
- 		
- </bean>
- 
- 
- 
  
  
 </beans>
