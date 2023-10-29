@@ -20,10 +20,19 @@ public class Test {
 		
 		System.out.println("------------------");
 		
+		/*
+		 * Pepsi obj = (Pepsi)context.getBean("p1");
+		 * 
+		 * System.out.println(obj);
+		 * 
+		 * 
+		 */
 		
-		Pepsi obj = (Pepsi)context.getBean("p1");
 		
-		System.out.println(obj);
+		Bread b1 = (Bread)context.getBean("c1");
+		System.out.println(b1);
+		
+		
 		
 		
 		

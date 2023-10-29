@@ -1,0 +1,42 @@
+package com.springcore.lifecycle;
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+
+
+
+
+public class Bread {
+
+	private String price;
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public Bread() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Bread [price=" + price + "]";
+	}
+	
+	
+	@PostConstruct
+	public void start() {
+		System.out.println("starting method of the PostConstruct");
+	}
+	@PreDestroy
+	public void end() {
+		System.out.println("ending method of the preDestroy");
+	}
+	
+	
+}

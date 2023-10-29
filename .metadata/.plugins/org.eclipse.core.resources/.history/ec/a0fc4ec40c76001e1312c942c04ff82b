@@ -1,0 +1,25 @@
+package com.springcore.lifecycle;
+
+public class Bread {
+
+	private String price;
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
+	}
+
+	public Bread() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Bread [price=" + price + "]";
+	}
+	
+}
