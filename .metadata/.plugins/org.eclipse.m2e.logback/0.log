@@ -818,3 +818,37 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact junit:junit:j
 2023-10-29 00:17:59,419 [Worker-186: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
 2023-10-29 00:18:21,225 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
 2023-10-29 00:18:21,227 [Worker-182: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:22:28,506 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-10-29 08:25:10,364 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:25:10,421 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:27:42,087 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:27:42,091 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:29:25,064 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-10.0.15; built: 2023-04-11T17:25:14.480Z; git: 68017dbd00236bb7e187330d7585a059610f661d; jvm 17.0.8.1+1
+2023-10-29 08:29:25,134 [Start Help Server] INFO  o.e.j.s.s.DefaultSessionIdManager - Session workerName=node0
+2023-10-29 08:29:25,226 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@22fe3186{/help,null,AVAILABLE}
+2023-10-29 08:29:25,240 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@232684bc{HTTP/1.1, (http/1.1)}{127.0.0.1:19031}
+2023-10-29 08:29:25,373 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started Server@2d2fb551{STARTING}[10.0.15,sto=0] @502335ms
+2023-10-29 08:37:53,916 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:37:53,920 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:38:39,490 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:38:39,493 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:39:39,537 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:39:39,539 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:42:28,153 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:42:28,156 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:43:21,647 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:43:21,652 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:44:05,538 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:44:05,558 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:44:42,097 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:44:42,100 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:45:27,388 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:45:27,391 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:46:47,508 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:46:47,510 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:47:33,246 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:47:33,250 [Worker-17: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:48:24,629 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:48:24,632 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
+2023-10-29 08:54:51,438 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/main/resources
+2023-10-29 08:54:51,440 [Worker-19: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory /home/mm1/eclipse-workspace/com.springcore/src/test/resources
