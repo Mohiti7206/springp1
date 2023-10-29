@@ -1,0 +1,50 @@
+package com.springcore.auto.wire.annotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.*;
+
+
+public class Emp {
+	
+	 @Autowired 
+	 @Qualifier("tempaddress2")
+	private Address address;
+
+	public Address getAddress() {
+		return address;
+	}
+
+	/* <!- @Autowired-> */
+	public void setAddress(Address address) {
+		this.address = address;
+		System.out.println("inside the setter method");
+	}
+	
+	
+	/* @Autowired */
+	public Emp(Address address) {
+		super();
+		this.address = address;
+		System.out.println("inside the constructor");
+	}
+
+	public Emp() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "Emp [address=" + address + "]";
+	}
+	
+	
+	
+	/*
+	 * ya toh hum constructor ,setter method , ya fer direct variable k
+	 * upar @Autowired likh skte hai aur apni value ko set krwa skte hai
+	 */
+	
+	
+
+}
