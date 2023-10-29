@@ -9,10 +9,16 @@
  
   <context:annotation-config/>
  
-  <bean class="com.springcore.auto.wire.annotation.Address" name="tempaddress">
-    <property name="street" value="temp1 street ynr"/>
-    <property name="city" value="temp2 street"/>
+  <bean class="com.springcore.auto.wire.annotation.Address" name="tempaddress1">
+    <property name="street" value="temp1 street karnal"/>
+    <property name="city" value="temp2 street chennai"/>
   </bean>
+  
+   <bean class="com.springcore.auto.wire.annotation.Address" name="tempaddress2">
+    <property name="street" value="temp1 street ynr"/>
+    <property name="city" value="temp2 street mumbai"/>
+  </bean>
+  
   
   <bean class="com.springcore.auto.wire.annotation.Emp" name="emp1"   />
   

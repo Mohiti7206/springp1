@@ -10,10 +10,21 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("/com/springcore/auto/wire/annotation/annoconfig.xml");	
 		Emp emp1 = context.getBean("emp1", Emp.class);
 		System.out.println(emp1);
+		
 
 	}
-
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
