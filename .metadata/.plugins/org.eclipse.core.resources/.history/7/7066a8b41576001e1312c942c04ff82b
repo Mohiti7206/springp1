@@ -1,0 +1,15 @@
+package com.springcore.auto.wire;
+
+public class Emp {
+	
+	private String address;
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		address = address;
+	}
+
+}

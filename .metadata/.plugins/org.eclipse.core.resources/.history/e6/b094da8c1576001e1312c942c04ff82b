@@ -1,0 +1,9 @@
+package com.springcore.auto.wire;
+
+public class Address {
+	
+	private String street;
+	private String city;
+	
+
+}
