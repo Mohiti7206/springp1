@@ -24,12 +24,8 @@ public class Demo {
 	private double e;
 	
 	
-	@Value("#{ new java.lang.String('Mohit kumar')  }")
+	@Value("#{ java.lang.String('Mohit kumar batra')  }")
 	private String name;
-	
-	@Value("#{  8>22  }")
-	private boolean isActive;
-	
 	
 	
 	public double getE() {
@@ -66,10 +62,8 @@ public class Demo {
 	}
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + ", isActive=" + isActive
-				+ "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", e=" + e + ", name=" + name + "]";
 	}
-	
 	
 	
 }

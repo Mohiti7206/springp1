@@ -27,7 +27,7 @@ public class Demo {
 	@Value("#{ new java.lang.String('Mohit kumar')  }")
 	private String name;
 	
-	@Value("#{  8>22  }")
+	
 	private boolean isActive;
 	
 	

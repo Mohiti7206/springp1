@@ -18,23 +18,12 @@ public class Test {
 		Expression exp = temp.parseExpression("22+322");
 		System.out.println(exp.getValue());
 		
+		
+		
+		
+		
+		
+
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
