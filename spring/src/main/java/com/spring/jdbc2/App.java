@@ -7,6 +7,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import com.spring.jdbc2.dao.StudentDao;
 import com.spring.jdbc2.entities.Student;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,10 +15,17 @@ public class App {
 
 	public static void main(String[] args) {
 		
+	/*	
+	//	try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc2/aloneconfig.xml"))
+			
 		
-		try (AbstractApplicationContext context = new ClassPathXmlApplicationContext("com/spring/jdbc2/aloneconfig.xml")) 
 		{
-			/*
+		*/	
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(JdbcConfig.class);
+		
+		
+		
+		/*
 			 * 
 			 * JdbcTemplate template = context.getBean("jdbcTemplate", JdbcTemplate.class);
 			 * 
@@ -30,14 +38,14 @@ public class App {
 					
 			StudentDao studentDao = context.getBean("studentDao" , StudentDao.class);
 			
-			/*  // insert
-			 * Student student = new Student(); student.setId(888);
-			 * student.setName("mohit"); student.setCity("ynr");
-			 * 
-			 * int result = studentDao.insert(student);
-			 * 
-			 * System.out.println("student added "+ result);
-			 */
+			  // insert
+			  Student student = new Student(); student.setId(8881);
+			  student.setName("mohit"); student.setCity("ynr");
+			  
+			  int result = studentDao.insert(student);
+			  
+			  System.out.println("student added "+ result);
+			 
 			
 			
 			
@@ -74,14 +82,7 @@ public class App {
 			
 			
 			
-			
-			
-			
-		} catch (BeansException e) {
-			e.printStackTrace();
-		}
-		
-		
+	
 		
 		
 
