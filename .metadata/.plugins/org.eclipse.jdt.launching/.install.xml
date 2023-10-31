@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="/usr/lib/jvm/java-17-openjdk-amd64" stamp="1697891517259"/>
     <entry loc="/usr/lib/jvm/java-13-openjdk-amd64" stamp="1697892577029"/>
     <entry loc="/home/mm1/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.8.v20230831-1047/jre" stamp="1696736399982"/>
     <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1697408251926"/>
     <entry loc="/home/mm1/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_17.0.8.v20230831-1047" stamp="1696736399982"/>
+    <entry loc="/usr/lib/jvm/jdk-17.0.9" stamp="1698690984622"/>
 </dirs>
