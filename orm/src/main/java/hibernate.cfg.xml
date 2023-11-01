@@ -14,14 +14,19 @@
 	<property name="format_sql">true</property>
 	<property name="connection.password">111</property>
 	<property name="connection.password">111</property>
-	<mapping class="com.tut.Student"/>
-	<mapping class="com.tut.Address"/>
+<!-- 	<mapping class="com.tut.Student"/>
+	<mapping class="com.tut.Address"/> -->
 <!-- 	<mapping class="com.map.Question"/>
 	<mapping class="com.map.Answer"/> -->
 	<mapping class="com.map2.Answer"/>
 	<mapping class="com.map2.Question"/>
 	<mapping class="com.map3.Emp"/>
 	<mapping class="com.map3.Project"/>
+	<mapping class="states.Certificate"/>
+	<mapping class="states.StateDemo"/>
+	<mapping class="states.Student"/>
+	
+	
 	</session-factory> 
  </hibernate-configuration>
  
