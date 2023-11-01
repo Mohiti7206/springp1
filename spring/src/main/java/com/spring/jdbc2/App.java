@@ -39,7 +39,7 @@ public class App {
 			StudentDao studentDao = context.getBean("studentDao" , StudentDao.class);
 			
 			  // insert
-			  Student student = new Student(); student.setId(8881);
+			  Student student = new Student(); student.setId(8883);
 			  student.setName("mohit"); student.setCity("ynr");
 			  
 			  int result = studentDao.insert(student);
@@ -74,6 +74,9 @@ public class App {
 			{
 				System.out.println(s);
 			}
+			
+			
+			
 			
 			
 			

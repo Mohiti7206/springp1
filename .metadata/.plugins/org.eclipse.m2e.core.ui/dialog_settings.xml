@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/mm1/eclipse-workspace/firstDemo"/>
+			<item value="/home/mm1/eclipse-workspace/spring"/>
 			<item value="/home/mm1/eclipse-workspace"/>
 			<item value="/home/mm1/eclipse-workspace/com.springcore/pom.xml"/>
 			<item value="/home/mm1/eclipse-workspace/fd"/>
@@ -34,6 +36,9 @@
 			<item value="com.sping.jdbc"/>
 		</list>
 		<list key="artifactId">
+			<item value="orm"/>
+			<item value="a1"/>
+			<item value="spring"/>
 			<item value="springjdbc"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -70,5 +75,18 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="p11"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="p11"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
 	</section>
 </section>
